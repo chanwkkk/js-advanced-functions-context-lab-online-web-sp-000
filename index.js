@@ -27,7 +27,7 @@
  }
 
 
- function createTimeInEvent(employee,time){
+ function createTimeInEvent(time){
 
     let newTimeinEvent = {
       type: "TimeIn",
@@ -42,7 +42,7 @@
 
 
 
- function createTimeOutEvent(employee,time){
+ function createTimeOutEvent(time){
     let newTimeOutEvent = {
       type: "TimeOut",
       date: time.slice(0,10),
