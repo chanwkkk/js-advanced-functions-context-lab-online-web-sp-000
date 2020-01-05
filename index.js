@@ -26,7 +26,11 @@
     return records.map(em=>createEmployeeRecord(em))
  }
 
+<<<<<<< HEAD
  function createTimeInEvent(time){
+=======
+ function createTimeInEvent(employee,time){
+>>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
     let newTimeinEvent = {
       type: "TimeIn",
       date: time.slice(0,10),
@@ -34,12 +38,21 @@
     }
 
 
+<<<<<<< HEAD
     this.timeInEvents.push(newTimeinEvent)
     return this
 
  }
 
  function createTimeOutEvent(time){
+=======
+    employee.timeInEvents.push(newTimeinEvent)
+    return employee
+
+ }
+
+ function createTimeOutEvent(employee,time){
+>>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
     let newTimeOutEvent = {
       type: "TimeOut",
       date: time.slice(0,10),
@@ -47,6 +60,7 @@
     }
 
 
+<<<<<<< HEAD
     this.timeOutEvents.push(newTimeOutEvent)
     return this
 
@@ -56,13 +70,30 @@
    let date = time.slice(0,10)
    let timeInObj = this.timeInEvents.find(x=>x.date==date)
    let timeOutObj = this.timeOutEvents.find(x=>x.date==date)
+=======
+    employee.timeOutEvents.push(newTimeOutEvent)
+    return employee
+
+ }
+
+ function hoursWorkedOnDate(employee,time){
+   let date = time.slice(0,10)
+   let timeInObj = employee.timeInEvents.find(x=>x.date==date)
+   let timeOutObj = employee.timeOutEvents.find(x=>x.date==date)
+>>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
 
    return (timeOutObj.hour - timeInObj.hour)/100
  }
 
+<<<<<<< HEAD
  function wagesEarnedOnDate(time){
    let hours = hoursWorkedOnDate.call(this,time)
    return this.payPerHour*hours
+=======
+ function wagesEarnedOnDate(employee,time){
+   let hours = hoursWorkedOnDate(employee,time)
+   return employee.payPerHour*hours
+>>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
  }
 
  // function allWagesFor(employee){
@@ -72,7 +103,11 @@
  // }
 
  function calculatePayroll(employees){
+<<<<<<< HEAD
    return employees.reduce((accumulator,em)=>accumulator+allWagesFor.call(em),0)
+=======
+   return employees.reduce((accumulator,em)=>accumulator+allWagesFor(em),0)
+>>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
  }
 
  function findEmployeeByFirstName(records, firstName){
