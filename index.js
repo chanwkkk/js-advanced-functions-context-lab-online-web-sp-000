@@ -80,20 +80,14 @@
    let date = time.slice(0,10)
    let timeInObj = employee.timeInEvents.find(x=>x.date==date)
    let timeOutObj = employee.timeOutEvents.find(x=>x.date==date)
->>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
 
    return (timeOutObj.hour - timeInObj.hour)/100
  }
 
-<<<<<<< HEAD
+
  function wagesEarnedOnDate(time){
    let hours = hoursWorkedOnDate.call(this,time)
    return this.payPerHour*hours
-=======
- function wagesEarnedOnDate(employee,time){
-   let hours = hoursWorkedOnDate(employee,time)
-   return employee.payPerHour*hours
->>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
  }
 
  // function allWagesFor(employee){
