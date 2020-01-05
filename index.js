@@ -26,19 +26,15 @@
     return records.map(em=>createEmployeeRecord(em))
  }
 
-<<<<<<< HEAD
- function createTimeInEvent(time){
-=======
+
  function createTimeInEvent(employee,time){
->>>>>>> a451d0e7b9c3bf9896ce1b7a73340db32c70e78d
+   
     let newTimeinEvent = {
       type: "TimeIn",
       date: time.slice(0,10),
       hour: parseInt(time.slice(11))
     }
 
-
-<<<<<<< HEAD
     this.timeInEvents.push(newTimeinEvent)
     return this
 
