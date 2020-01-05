@@ -59,7 +59,7 @@
    let timeInObj = this.timeInEvents.find(x=>x.date==date)
    let timeOutObj = this.timeOutEvents.find(x=>x.date==date)
 
-  return timeInObj.hour - timeOutObj.hour
+  return (timeInObj.hour - timeOutObj.hour)/100
 
 
  }
