@@ -59,8 +59,7 @@
    let timeInObj = this.timeInEvents.find(x=>x.date==date)
    let timeOutObj = this.timeOutEvents.find(x=>x.date==date)
 
-    employee.timeOutEvents.push(newTimeOutEvent)
-    return employee
+  return timeInObj.hour - timeOutObj.hour
 
 
  }
