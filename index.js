@@ -28,7 +28,7 @@
 
 
  function createTimeInEvent(employee,time){
-   
+
     let newTimeinEvent = {
       type: "TimeIn",
       date: time.slice(0,10),
